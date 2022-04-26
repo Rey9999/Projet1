@@ -17,3 +17,7 @@ une page pour les toilettes à l'international chiottes turques japonaises et in
 
 Une page avec un formulaire pour continuer à remplir le site.
 
+26/04/22
+
+Premiere mise en page, création du header et du background pour le site
+

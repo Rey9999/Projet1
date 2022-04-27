@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background: url('pexels-rafael-guajardo-604684.jpg');
     color: white;
     margin: 0;
     Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
@@ -8,10 +8,16 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    padding-top: 0px;
 }
 
 .logo-toilets img {
-    height: 5vh;
+    height: 13vh;
+    width: 14vh;
+}
+
+.navbar {
+    width: 90%;
 }
 
 .navbar ul {
@@ -20,21 +26,31 @@ header {
     justify-content: space-around;
 }
 
+.navbar li {
+    padding-right: 4px;
+}
+
 .navbar a {
     text-decoration: none;
     color: white;
+    font-size: 20px;
 }
 
 .title-index {
     text-align: center;
-    padding-top: 10px;
-    font-size: 6.5vh;
+    font-size: 100%;
     filter: brightness(1.75);
+    align-items: center;
 }
 
-.presentation-video {
-    display: flex;
-    justify-content: space-between;
+.title-index h1 {
+    font-size: 60px;
+    text-shadow: rgb(3, 109, 121) 15px 0 25px;
+}
+
+.title-index img {
+    width: 8%;
+    filter: drop-shadow(10px 5px 5px rgb(3, 109, 121));
 }
 
 .explication {
@@ -42,6 +58,9 @@ header {
     padding: 50px;
 }
 
-.youtube {
+.youtube iframe {
     border: 4px solid white;
+    width: 100%;
+    height: "auto";
+    margin: 0;
 }

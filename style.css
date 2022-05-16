@@ -1,14 +1,19 @@
+/* Fond d'écran, navbar, et écriture pour le site */
+
 body {
-    background: url('pexels-rafael-guajardo-604684.jpg');
+    background: url("Photos-bruits/VistaCreate-209874980-stock-photo-dark-blue-wall-old-bricks.jpeg");
     color: white;
     margin: 0;
     Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     padding-top: 0px;
+    box-shadow: 0px 5px 7px white;
 }
 
 .logo-toilets img {
@@ -16,51 +21,545 @@ header {
     width: 14vh;
 }
 
-.navbar {
+.navbar-descktop {
     width: 90%;
 }
 
-.navbar ul {
+.navbar-descktop a:hover {
+    background-color: skyblue;
+}
+
+.navbar-burger {
+    position: relative;
+}
+
+.navbar-burger ul {
+    display: none;
+    background: #4530a4;
+    opacity: 0.75;
+    position: fixed;
+    right: 7%;
+    top: -2%;
+    padding: 0% 2% 0% 0%;
+    margin-right: 6%;
+    height: 17%;
+    width: 29%;
+    z-index: 999;
+    list-style: none;
+    border: 3px solid white;
+    border-radius: 3.5%;
+}
+
+.navbar-burger a {
+    color: white;
+}
+
+.burger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 70px;
+    margin-top: -22px;
+}
+
+svg {
+    width: 33px;
+    position: absolute;
+    right: 2vh;
+}
+
+.navbar-descktop ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
 
-.navbar li {
+.navbar-descktop li {
     padding-right: 4px;
 }
 
-.navbar a {
+.navbar-descktop a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.title-index {
+.navbar-burger li {
+    margin-bottom: 3%;
+}
+
+
+/* Premiere page, index */
+
+.container {
     text-align: center;
     font-size: 100%;
     filter: brightness(1.75);
     align-items: center;
+    border: 1px solid #FFF;
+    border-radius: 1em;
+    margin: auto;
+    padding: 5px;
 }
 
-.title-index h1 {
-    font-size: 60px;
-    text-shadow: rgb(3, 109, 121) 15px 0 25px;
+.titre-paris {
+    text-shadow: -1px -1px 10px #fff, 1px 1px 10px #fff, 0 0 20px #5900ff, 0 0 40px #5900ff, 0 0 60px #5900ff, 0 0 80px #5900ff, 0 0 100px #5900ff;
+    animation: flashing-text 4s ease 0s reverse infinite;
+}
+
+.title-index {
+    box-shadow: 0 0 5px 0 #fff, inset 0 0 5px 0 #fff, 0 0 20px 0 #5900ff, inset 0 0 5px 0 #5900ff, 0 0 20px 2px #5900ff, inset 0 0 20px 2px #5900ff;
+    animation: flashing 4s ease 0s infinite;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .title-index img {
     width: 8%;
     filter: drop-shadow(10px 5px 5px rgb(3, 109, 121));
+    transition: transform .1s;
+}
+
+.title-index img:hover {
+    transform: scale(1.5);
 }
 
 .explication {
     text-align: center;
     padding: 50px;
+    font-size: 20px;
 }
 
 .youtube iframe {
     border: 4px solid white;
+    border-radius: 2%;
     width: 100%;
     height: "auto";
     margin: 0;
+}
+
+.youtube {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Deuxieme page du site, Toilets history*/
+
+.title-history h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.title-history h2 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.antiquite {
+    display: flex;
+    align-items: center;
+}
+
+.explication-antiq {
+    text-align: right;
+    margin-left: 25px;
+}
+
+.photo-antiq img {
+    height: 40vh;
+    width: 40vw;
+    margin-left: 15px;
+    display: block;
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 2%;
+}
+
+.moyenage {
+    display: flex;
+    align-items: center;
+}
+
+.title-moyenage {
+    text-align: left;
+    margin-left: 20px;
+    text-decoration: white underline;
+}
+
+.photo-moyenage img {
+    height: 50vh;
+    width: 35vw;
+    margin-right: 15px;
+    display: block;
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 2%;
+}
+
+.explication-moyenage {
+    text-align: left;
+    margin-right: 25px;
+}
+
+.today {
+    display: flex;
+    align-items: center;
+}
+
+.title-today h2 {
+    text-align: right;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+.explication-today {
+    text-align: right;
+    margin-left: 25px;
+}
+
+.photo-today img {
+    height: 40vh;
+    width: 40vw;
+    margin-left: 15px;
+    display: block;
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 2%;
+}
+
+.galery {
+    margin-left: 100px;
+    flex-direction: column;
+}
+
+.paris-toilets {
+    display: flex;
+    justify-content: space-around;
+}
+
+.explain {
+    text-align: right;
+    width: 50%;
+}
+
+.wild-toilets h3 {
+    text-align: right;
+}
+
+#bureau {
+    height: 50vh;
+    width: 100%;
+    margin-left: 50px;
+}
+
+button {
+    float: left;
+    border: 3px solid #1f618d;
+    border-radius: 5px;
+    width: 30%;
+    padding: 6px;
+}
+
+.round {
+    display: none;
+}
+
+
+/* Troisieme page du site, Toilets Paris*/
+
+.paris-toilets {
+    display: flex;
+}
+
+.paris-toilets iframe {
+    max-width: 80%;
+    height: 80px;
+    margin-left: 20px;
+    border: 4px solid white;
+    border-radius: 2%;
+}
+
+.galery {
+    margin: 15px;
+}
+
+.rolling-toilets,
+.cafe-toilets,
+.felicita-toilets,
+.wild-toilets {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 20vw;
+    height: 15vw;
+    border: 2px solid white;
+    border-radius: 2%;
+}
+
+.photo-rolling img {
+    height: 95%;
+}
+
+.explain {
+    width: 80%;
+}
+
+#mobile {
+    display: none;
+}
+
+
+/*Quatrieme page, International toilets */
+
+iframe:not(.last-video) {
+    margin-right: 20px;
+    width: 300px;
+}
+
+.jap,
+.usa,
+.sweden {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid white;
+}
+
+.map-videos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.map-world iframe {
+    width: 95%;
+    margin-left: 15px;
+}
+
+.explain-japan,
+.explain-usa,
+.explain-sweden {
+    color: black;
+    text-align: center;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Page formulaire */
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    border: 5px solid white;
+    border-radius: 2%;
+    background-color: rgb(255, 255, 255);
+    width: 50vw;
+    padding: 50px;
+    color: black;
+}
+
+input,
+textarea {
+    border: 3px solid #1f618d;
+    border-radius: 5px;
+    width: 100%;
+    padding: 4px;
+}
+
+button {
+    float: right;
+    border: 3px solid #1f618d;
+    border-radius: 5px;
+    width: 30%;
+    padding: 6px;
+}
+
+.paragraph-end {
+    font-size: 30px;
+    text-align: center;
+}
+
+.fleche {
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotation {
+    position: relative;
+    border: 3px solid #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+span {
+    z-index: 10;
+    height: 3px;
+    margin: 1px;
+    width: 30px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 35%;
+}
+
+span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 35%;
+}
+
+span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+}
+
+span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 54%;
+}
+
+.rotation:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.rotation:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.rotation:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.rotation:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}
+
+.navbar-burger,
+.burger {
+    display: none;
+}
+
+
+/* Page de l'hippo */
+
+.title-hippo {
+    font-size: 40px;
+    text-align: center;
+    color: brown;
+}
+
+.hippo {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:700px) {
+    .antiquite,
+    .today {
+        flex-direction: column;
+    }
+    .moyenage {
+        flex-direction: column-reverse;
+    }
+    .toilets-history h2 {
+        text-align: center;
+    }
+    .explication-antiq,
+    .explication-moyenage,
+    .explication-today {
+        text-align: center;
+        margin: auto;
+    }
+    .navigation {
+        display: none;
+    }
+    .photo-antiq img,
+    .photo-today img {
+        height: 40vh;
+        width: 90vw;
+        margin-left: 20px;
+        display: block;
+        object-fit: cover;
+        border: 4px solid white;
+        border-radius: 2%;
+    }
+    .photo-moyenage img {
+        height: 60vh;
+        width: 90vw;
+        margin-left: 20px;
+        display: block;
+        object-fit: cover;
+        border: 4px solid white;
+        border-radius: 2%;
+    }
+    .navbar-descktop {
+        display: none
+    }
+    .map-videos {
+        display: flex;
+        flex-direction: column;
+    }
+    .paris-toilets {
+        flex-direction: column-reverse;
+    }
+    .rolling-toilets,
+    .cafe-toilets,
+    .felicita-toilets,
+    .wild-toilets {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+    p.explain {
+        display: none;
+    }
+    img.image {
+        width: 200px;
+        height: 100px;
+    }
+    .navbar-burger,
+    .burger {
+        display: block;
+    }
 }

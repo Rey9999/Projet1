@@ -138,11 +138,19 @@ svg {
     width: 100%;
     height: "auto";
     margin: 0;
+    width: 400px;
+    height: 60vh;
 }
 
 .youtube {
     display: flex;
     justify-content: center;
+}
+
+.videowork {
+    width: 50%;
+    border: 4px solid white;
+    border-radius: 2%;
 }
 
 
@@ -250,7 +258,7 @@ svg {
 }
 
 #bureau {
-    height: 50vh;
+    height: 75vh;
     width: 100%;
     margin-left: 50px;
 }
@@ -331,6 +339,10 @@ iframe:not(.last-video) {
     padding-top: 15px;
     padding-bottom: 15px;
     border: 2px solid white;
+}
+
+.sweden iframe {
+    height: 330px;
 }
 
 .map-videos {
@@ -494,6 +506,13 @@ span:nth-child(4) {
     justify-content: center;
 }
 
+.hippo img {
+    width: 40vw;
+}
+
+
+/* Media queries */
+
 @media screen and (max-width:700px) {
     .antiquite,
     .today {
@@ -561,5 +580,17 @@ span:nth-child(4) {
     .navbar-burger,
     .burger {
         display: block;
+    }
+    .jap,
+    .usa,
+    .sweden {
+        background-color: white;
+        width: 300px;
+        border-radius: 10px;
+        margin: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 2px solid white;
+        margin-bottom: 20px;
     }
 }
